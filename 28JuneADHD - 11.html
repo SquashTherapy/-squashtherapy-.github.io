@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative ADHD Therapy Through Squash</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 5px 0; /* Approximately 15mm */
+            font-size: 1rem;
+        }
+        nav {
+            background-color: #3a506b; /* Dark blue-grey */
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            background-color: #5bc0be; /* Light teal */
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #6fffe9; /* Lighter teal on hover */
+            color: #3a506b;
+        }
+        .content-wrapper {
+            flex-grow: 1;
+        }
+        .content-section {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #5bc0be;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Innovative ADHD Therapy Through Squash</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#for-professionals">For Professionals</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <section id="about" class="content-section">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing innovative ADHD therapy using the game of squash. Our unique approach helps children improve focus, enhance working memory, and develop better coordination.</p>
+        </section>
+
+        <section id="services" class="content-section">
+            <h2>Our Services</h2>
+            <p>We offer specialized squash-based therapy sessions for children with ADHD and other concentration-related disorders. Our programs are tailored to each child's needs and focus on improving cognitive functions through engaging physical activity.</p>
+        </section>
+
+        <section id="for-professionals" class="content-section">
+            <h2>For Medical Professionals</h2>
+            <p>Learn how to refer patients and discover the benefits of our program for your practice. We work closely with healthcare providers to ensure comprehensive care for children with ADHD.</p>
+        </section>
+
+        <section id="resources" class="content-section">
+            <h2>Resources</h2>
+            <p>Access valuable information about ADHD, our therapy approach, and the latest research on cognitive improvement through physical activity. We provide resources for both medical professionals and parents.</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to learn more about our programs or to schedule a consultation. We're here to answer your questions and provide support for children with ADHD and their families.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Innovative ADHD Therapy. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <a href="#" id="back-to-top">Back to Top</a>
+
+    <script>
+        // JavaScript for the "Back to Top" button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("back-to-top").style.display = "block";
+            } else {
+                document.getElementById("back-to-top").style.display = "none";
+            }
+        }
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Separate handler for "Back to Top" button
+        document.getElementById('back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
+</html>
