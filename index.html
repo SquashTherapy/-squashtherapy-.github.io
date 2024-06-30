@@ -64,18 +64,6 @@
             text-align: center;
             padding: 1rem;
         }
-        #back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #5bc0be;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: none;
-            z-index: 1000;
-        }
 
         /* Media query for tablets and smaller screens */
         @media (max-width: 768px) {
@@ -137,20 +125,7 @@
         </footer>
     </div>
 
-    <a href="#" id="back-to-top">Back to Top</a>
-
     <script>
-        // JavaScript for the "Back to Top" button
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("back-to-top").style.display = "block";
-            } else {
-                document.getElementById("back-to-top").style.display = "none";
-            }
-        }
-
         // Smooth scrolling for nav links
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -169,12 +144,6 @@
                     });
                 }
             });
-        });
-
-        // Separate handler for "Back to Top" button
-        document.getElementById('back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
         });
     </script>
 </body>
